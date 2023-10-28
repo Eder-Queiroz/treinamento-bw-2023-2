@@ -1,0 +1,57 @@
+GET http://localhost:3000/ HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3000/api/student HTTP/1.1
+content-type: application/json
+
+{
+  "name": "John Doe",
+  "cpf": "120.732.096-02",
+  "age": 30
+}
+###
+GET http://localhost:3000/api/student HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3000/api/student/1 HTTP/1.1
+content-type: application/json
+
+###
+PUT http://localhost:3000/api/student/1 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Eder Queiroz",
+  "cpf": "120.732.096-02",
+  "age": 19
+}
+
+### SCORE ROUTERS
+POST http://localhost:3000/api/score HTTP/1.1
+content-type: application/json
+
+{
+  "subject": "Português",
+  "score": 8.5,
+  "student_id": 1
+}
+
+###
+GET http://localhost:3000/api/score HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3000/api/score/1 HTTP/1.1
+content-type: application/json
+
+###
+PUT http://localhost:3000/api/score/1 HTTP/1.1
+content-type: application/json
+
+{
+  "subject": "Geografia",
+  "score": 5,
+  "student_id": 1
+}
